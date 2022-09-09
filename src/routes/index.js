@@ -1,20 +1,11 @@
 const express = require('express')
-
+const admin = require('./admin/index')
 const router = express.Router()
 
-const result = []
+const products = admin.products
 
 router.get('/', (req, res) => {
-    res.render('index', {products: result})
-})
-
-router.get('/add-product', (req, res) => {
-    res.render('add-product')
-})
-router.post('/add-product', (req, res) => {
-    result.push({title: req.body.title})
-    console.log(req)
-    res.redirect('/')
+    res.render('Shop', { products })
 })
 
 module.exports = router

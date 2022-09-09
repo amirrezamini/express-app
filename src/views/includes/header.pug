@@ -1,8 +1,7 @@
-- var links = [{title: 'add-product', link: '/add-product'}]
-
-header 
-    nav 
-        ul.header
-            each item in links
-                li.header-item 
-                    a(href=item.link).header-item-link= item.title
+header.main-header
+    nav.main-header__nav
+        ul.main-header__item-list
+            li.main-header__item
+                a(href="/", class=(path === '/' ? 'active' : '')) Shop
+            li.main-header__item
+                a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Product
