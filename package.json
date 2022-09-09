@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js -e *",
-    "scss-w": "sass --no-source-map -w src/public/scss:src/public/css"
+    "scss-w": "sass --no-source-map -w src/public/scss:src/public/css",
+    "dev": "concurrently \"npm run scss-w\" \"npm start\" \"npm run tailwind:css\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.4.0",
     "dotenv": "^16.0.2",
     "express": "^4.18.1"
   },

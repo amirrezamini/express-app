@@ -1,0 +1,8 @@
+- var links = [{title: 'add-product', link: '/add-product'}]
+
+header 
+    nav 
+        ul.header
+            each item in links
+                li.header-item 
+                    a(href=item.link).header-item-link= item.title
